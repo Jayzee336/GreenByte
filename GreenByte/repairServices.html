@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repair & Reuse: A Web-Based Platform for Extending Electronic Device Lifespan and Reducing E-Waste</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-group fade-in">
+      <img src="gb.png" alt="GreenByte">
+      <div class="logo">GreenByte</div>
+    </div>
+    <nav class="fade-in">
+      <a href="home.html">Home</a>
+      <a href="repairServices.html">Services</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="home.html#impact">Eco-Impact</a>
+      <a href="home.html#about">About</a>
+      <a href="home.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero fade-in">
+    <h1>What we Offer?</h1>
+    <section id="passport">
+    <div class="cards">
+      <div class="card fade-in">
+  <img src="repairService.jfif" alt="Repair" class="card-img">
+        <h3>Repair Services</h3>
+        <p>We recommend different repair services for your devices.</p>
+      </div>
+      <div class="card fade-in">
+  <img src="maps.jpg" alt="Device Passport" class="card-img">
+        <h3>Maps</h3>
+        <p>Shows nearest electronic repair shops to you.</p>
+      </div>
+    </div>
+  </section>
+  </section>
+
+  <section id="services" class="section fade-in">
+    <h2>Repair Services</h2>
+    <p>Connect with trusted technicians to fix your devices.</p>
+    <div class="cards">
+      <a href="https://www.carlcare.com/ph/"><div class="card fade-in">Phone Repair<img src="repair1.png" alt="PhoneRepair"></div></a>
+      <a href="https://www.fixmymac.ph/#services"><div class="card fade-in">Laptop Repair<img src="repair2.png" alt="LaptopRepair"></div></a>
+      <a href="https://www.carlcare.com/ph/"><div class="card fade-in">Tablet Repair<img src="repair1.png" alt="TabletRepair"></div></a>
+    </div>
+  </section>
+
+  <section id="map" class="section">
+    <h2>Nearest Repair Shops</h2>
+    <p>Track repair shops near you.</p>
+    <div class="cards">
+      <div class="card fade-in">
+        <h3>Nearby Phone Repair Shops</h3>
+        <iframe
+          src="https://www.google.com/maps?q=phone+repair+shop+near+me&output=embed"
+          width="220"
+          height="180"
+          style="border:0; margin-top:10px; border-radius:8px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GreenByte Platform</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: 0.1 });
+  
+      elements.forEach(element => observer.observe(element));
+    });
+  </script>
+
+</body>
+</html>
