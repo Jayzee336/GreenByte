@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repair & Reuse: A Web-Based Platform for Extending Electronic Device Lifespan and Reducing E-Waste</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- Added AOS for scroll animations -->
+</head>
+<body>
+  <header>
+    <div class="logo-group fade-in">
+      <img src="gb.png" alt="GreenByte">
+      <div class="logo">GreenByte</div>
+    </div>
+    <nav class="fade-in">
+      <a href="home.html">Home</a>
+      <a href="repairServices.html">Services</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="home.html#impact">Eco-Impact</a>
+      <a href="home.html#about">About</a>
+      <a href="home.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero fade-in">
+    <h1>What we Offer?</h1>
+      <div class="services">
+        <div class="box">
+          <h3>Repair Services</h3>
+          <img src="repairService.jpg" alt="Repair Services">
+          <p>We offer reliable repair services for phones, laptops, and tablets.</p>
+        </div>
+        <div class="box">
+          <h3>Maps</h3>
+          <img src="maps.jpg" alt="Maps">
+          <p>Find nearest electronic repair shops locations easily with our interactive maps.</p>
+        </div>
+      </div>
+  </section>
+
+  <section id="services" class="section fade-in" data-aos="fade-up">
+    <h2>Repair Services</h2>
+    <p>Connect with trusted technicians to fix your devices.</p>
+    <div class="cards">
+      <a href="https://www.carlcare.com/ph/"><div class="card fade-in" data-aos="zoom-in"><h3>Phone Repair</h3><img src="repair1.png" alt="PhoneRepair"></div></a>
+      <a href="https://www.fixmymac.ph/#services"><div class="card fade-in" data-aos="zoom-in" data-aos-delay="100"><h3>Laptop Repair</h3><img src="repair2.png" alt="LaptopRepair"></div></a>
+      <a href="https://www.carlcare.com/ph/"><div class="card fade-in" data-aos="zoom-in" data-aos-delay="200"><h3>Tablet Repair</h3><img src="repair1.png" alt="TabletRepair"></div></a>
+    </div>
+  </section>
+
+  <section id="map" class="section fade-in" data-aos="fade-up">
+    <h2>Nearest Repair Shops</h2>
+    <p>Track electronic repair shops near you.</p>
+    <div class="cards">
+      <div class="card fade-in" data-aos="zoom-in">
+        <h3>Nearby Phone Repair Shops</h3>
+        <iframe
+          src="https://www.google.com/maps?q=phone+repair+shop+near+me&output=embed"
+          width="900"
+          height="250"
+          style="border:0; margin-top:10px; border-radius:8px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GreenByte Platform</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: 0.1 });
+  
+      elements.forEach(element => observer.observe(element));
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> <!-- AOS JS -->
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true,      // Whether animation should happen only once - while scrolling down
+    });
+  </script>
+</body>
+</html>
