@@ -1,0 +1,412 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f9f8;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: #2a9d8f;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Enhanced shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-group img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  user-select: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  padding: 0.5rem 1rem; /* Add padding for better click area */
+  border-radius: 8px; /* Rounded corners for nav links */
+}
+
+nav a:hover,
+nav a:focus {
+  color: #2a9d8f; /* Change text color on hover */
+  background-color: #e9c46a; /* Background color on hover */
+  outline: none;
+  border-radius: 8px; /* Maintain rounded corners */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #2a9d8f 0%, #264653 100%);
+  color: white;
+  padding: 8rem 2rem 6rem; /* Increased padding */
+  text-align: center;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+  border-bottom-left-radius: 20px; /* Rounded bottom corners */
+  border-bottom-right-radius: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem; /* Slightly larger font */
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.35rem; /* Slightly larger font */
+  max-width: 700px;
+  margin: 0 auto 2rem auto; /* Added margin below paragraph */
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #e9c46a;
+  color: #264653;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  background-color: #f4a261;
+  transform: translateY(-3px);
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem; /* Increased padding */
+}
+
+.section h2 {
+  font-size: 2.2rem; /* Slightly larger font */
+  margin-bottom: 1.5rem; /* Increased margin */
+  color: #264653;
+  border-bottom: 3px solid #e9c46a; /* Complementary border color */
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  text-align: center; /* Center align heading */
+  width: 100%; /* Ensure border spans full width if needed */
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.5rem;
+  line-height: 1.7;
+  text-align: center; /* Center align paragraph */
+}
+
+/* What We Offer Container */
+.services {
+  display: flex;
+  gap: 0; /* Add spacing between sections */
+  justify-content: center; /* Center the sections horizontally */
+  align-items: stretch; /* Ensure all sections have the same height */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Individual Section (Repair Services and Maps) */
+.services .section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem; /* Increased padding for more spacing inside the section */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  flex: 1 1 300px; /* Ensure sections grow/shrink equally, with a minimum width of 300px */
+  max-width: 500px; /* Optional: Limit the maximum width of each section */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Distribute content evenly */
+  height: 100%; /* Ensure all sections stretch to the same height */
+}
+
+/* Images inside sections */
+.services .section img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 1rem; /* Center the image and add spacing below */
+}
+
+/* Section Titles */
+.services .section h3 {
+  font-size: 1.8rem; /* Slightly larger font */
+  margin-bottom: 1rem;
+  color: #2a9d8f;
+  user-select: none;
+}
+
+/* Section Paragraphs */
+.services .section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Cards Container */
+.cards {
+  display: flex;
+  gap: 2rem; /* Add spacing between cards */
+  justify-content: center; /* Center the cards horizontally */
+  align-items: stretch; /* Ensure all cards have the same height */
+  margin-top: 20px;
+}
+
+/* Individual Card */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  flex: 1 1 250px; /* Ensure all cards grow/shrink equally, with a minimum width of 250px */
+  max-width: 300px; /* Optional: Limit the maximum width of each card */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute content evenly */
+  height: 100%; /* Ensure all cards stretch to the same height */
+}
+
+#map .card {
+  max-width: 100%; /* Allow the map card to take full width */
+  flex: 1 1 auto; /* Adjust flex properties to allow it to expand */
+  padding: 1rem; /* Adjust padding for the map card */
+}
+
+#map iframe {
+  display: block;
+  margin: 0 auto;
+  width: 800px; /* Make the iframe take the full width of its container */
+  height: 350px; /* Increased height for better visibility */
+  border: none;
+  border-radius: 10px;
+}
+
+.card img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 1rem; /* Center the image and add spacing below */
+}
+
+.card h3 {
+  font-size: 1.6rem; /* Slightly larger font */
+  margin-bottom: 1rem;
+  color: #2a9d8f;
+  user-select: none;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-8px); /* More pronounced lift effect */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+  outline: none;
+}
+
+.cards a {
+  text-decoration: none;
+}
+
+/* Eco-Impact Dashboard */
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.impact-card {
+  background: white;
+  border-radius: 15px; /* More rounded corners */
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure all cards stretch to the same height */
+}
+
+.impact-card:hover,
+.impact-card:focus-within {
+  margin: 0 auto;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  outline: none;
+}
+
+.impact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2a9d8f;
+  user-select: none;
+}
+
+.impact-card p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #264653;
+  user-select: text;
+}
+
+/* Contact Section */
+#contact a {
+  color: #2a9d8f;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+#contact a:hover,
+#contact a:focus {
+  border-color: #2a9d8f;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background: #264653;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0; /* Increased padding */
+  margin-top: auto;
+  font-size: 0.95rem;
+  user-select: none;
+  border-top: 3px solid #2a9d8f; /* Subtle border top */
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  nav {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    margin: 0.25rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .impact-card p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .impact-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .impact-card p {
+    font-size: 1.4rem;
+  }
+}
