@@ -189,13 +189,13 @@ nav a:focus {
 }
 
 /* Cards Container */
-.cards {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: stretch;
-  margin-top: 20px;
-}
+  .cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 20px;
+  }
 
 /* Individual Card */
 .card {
@@ -225,10 +225,11 @@ nav a:focus {
 #map iframe {
   display: block;
   margin: 0 auto;
-  width: 800px;
+  width: 100%;
   height: 350px;
   border: none;
   border-radius: 10px;
+  max-width: 900px;
 }
 
 .card img {
@@ -350,6 +351,10 @@ footer {
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   header {
     flex-direction: column;
     padding: 1rem;
@@ -367,6 +372,10 @@ footer {
     margin: 0.25rem;
   }
 
+  .hero {
+    padding: 6rem 1rem 2rem;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -375,16 +384,38 @@ footer {
     font-size: 1.1rem;
   }
 
+  .section {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
   .section h2 {
     font-size: 1.8rem;
+  }
+
+  .impact-stats {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
   }
 
   .impact-card p {
     font-size: 1.6rem;
   }
+
+  .box {
+    margin: 3rem 1rem;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 4rem 1rem 2rem;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
@@ -398,7 +429,13 @@ footer {
   }
 
   .cards {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .impact-stats {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.5rem;
   }
 
   .impact-card {
