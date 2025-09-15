@@ -221,7 +221,6 @@ nav a:focus {
 }
 
 #map .card, #supplies .card {
-  width: 800px;
   max-width: 100%;
   flex: 1 1 auto;
   padding: 1rem;
@@ -463,3 +462,4 @@ footer {
     font-size: 1.4rem;
   }
 }
+
