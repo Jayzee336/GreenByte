@@ -35,8 +35,8 @@ header {
 }
 
 .logo-group img {
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
 }
 
@@ -116,6 +116,10 @@ nav a:focus {
   max-width: 900px;
   margin: 3rem auto;
   padding: 0 1.5rem;
+}
+
+#about, #impact, #contact {
+  scroll-margin-top: 100px;
 }
 
 .section h2 {
@@ -216,20 +220,21 @@ nav a:focus {
   height: 100%;
 }
 
-#map .card {
+#map .card, #supplies .card {
+  width: 800px;
   max-width: 100%;
   flex: 1 1 auto;
   padding: 1rem;
 }
 
-#map iframe {
+#map iframe, #supplies iframe {
   display: block;
   margin: 0 auto;
   width: 100%;
+  max-width: 800px;
   height: 350px;
   border: none;
   border-radius: 10px;
-  max-width: 800px;
 }
 
 .card img {
@@ -408,6 +413,14 @@ footer {
 
   .cards {
     flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 769px) {
+  #map iframe, #supplies iframe {
+    width: 90vw;
+    max-width: 1400px;
+    height: 400px;
   }
 }
 
